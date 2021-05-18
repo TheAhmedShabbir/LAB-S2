@@ -1,0 +1,15 @@
+.product {
+  background-color: #e5e7eb;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-left: 50px;
+}
+
+.product .btn {
+  margin-left: 3px;
+  margin-right: 3px;
+}

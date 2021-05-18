@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hotel API</title>
+    <title>Products API</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,9 +10,111 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
+    <body>
 
+    <div class="container">
+        <h3 class="text-center mt-3">Products API</h3>
+        <button id="btn" class="btn btn-primary my-3">Add Product</button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="addmodel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="Name">Name</label>
+                            <input type="text" class="form-control" name="Name" id="Name" aria-describedby="helpId" placeholder="Name of Product">    
+                        </div>
+                      
+                        <div class="form-group">
+                            <label for="Price">Price</label>
+                            <input type="text" class="form-control" name=" Price" id="Price" aria-describedby="helpId" placeholder="Price of Product">           
+                        </div>
+                        <div class="form-group">
+                            <label for="Color">Color</label>
+                            <input type="text" class="form-control" name="Color" id="Color1" aria-describedby="helpId" placeholder="Color of Product">         
+                        </div>
+                      
+                        <div class="form-group">
+                            <label for="Department">Department</label>
+                            <input type="text" class="form-control" name="Department" id="Department" aria-describedby="helpId" placeholder="Department">
+                        </div>
+                      
+                        <div class="form-group">
+                            <label for="Description">Description</label>
+                            <input type="text"
+                              class="form-control" name="Description" id="Description" aria-describedby="helpId" placeholder="Description">
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" id="save" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div id="recipes"></div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="updatemodle" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="hidden" id="updateId" /> <br />
+                    <div class="form-group">
+                        <label for="UpdateName">Name</label>
+                        <input type="text" class="form-control" name="UpdateName" id="UpdateName" aria-describedby="helpId" placeholder="Name of Product">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="UpdatePrice">Price</label>
+                        <input type="text" class="form-control" name=" UpdatePrice" id="UpdatePrice" aria-describedby="helpId" placeholder="Price of Product"> 
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Updatecolor">Color</label>
+                        <input type="text" class="form-control" name=" Updatecolor" id="Updatecolor" aria-describedby="helpId" placeholder="Color of Product">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="UpdateDepartment">Department</label>
+                        <input type="text" class="form-control" name="UpdateDepartment" id="UpdateDepartment1" aria-describedby="helpId" placeholder="Department">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="UpdateDescription">Description</label>
+                        <input type="text" class="form-control" name="UpdateDescription" id="UpdateDescription" aria-describedby="helpId" placeholder="Description">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="UpdatedSave" class="btn btn-primary">Save</button>
+                 </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
